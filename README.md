@@ -1,44 +1,66 @@
-# vCard - Personal portfolio
+# Kyle Cantrell Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+This repository contains my personal portfolio website created for SWE 380 / CSC 580.
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+The site was customized from the open-source vCard Personal Portfolio template and was modified to reflect my professional background, education, technical experience, and personal design preferences.
 
-## Demo
+## About the Portfolio
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+The portfolio includes:
 
-## Prerequisites
+- A professional summary
+- Work experience
+- Education
+- Core technical and aviation skills
+- Responsive desktop and mobile layouts
+- A custom 1990s-inspired visual theme
 
-Before you begin, ensure you have met the following requirements:
+The content was intentionally limited to information considered appropriate for public release.
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+## Technologies Used
 
-## Installing vCard
+- HTML
+- CSS
+- JavaScript
+- Git
+- GitHub
+- GitHub Pages
 
-To install **vCard**, follow these steps:
+## Development Process
 
-Linux and macOS:
+Development was completed on the following feature branch:
+
+`feature/portfolio-personalization`
+
+The project was updated incrementally using Git commits and an AI-assisted development workflow. AI was used for planning, implementation suggestions, troubleshooting, content organization, and design iteration.
+
+All AI-generated recommendations were reviewed before implementation.
+
+## AI Assistance
+
+ChatGPT (GPT-5.6 Sol) was used as the AI assistant for this project.
+
+AI assistance included:
+
+- Repository and implementation planning
+- HTML and CSS modification suggestions
+- Responsive layout troubleshooting
+- Content organization
+- Accessibility and privacy considerations
+- Debugging CSS cascade and layout issues
+- Design iteration
+
+AI-generated work was reviewed, tested, and modified before being incorporated into the repository.
+
+## Privacy
+
+The portfolio intentionally avoids publishing sensitive personal information.
+
+Public contact information displayed on the site uses placeholder values rather than personal email addresses or phone numbers.
+
+## Running Locally
+
+Clone the repository:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
-
-## License
-
-MIT
+git clone https://github.com/killie82/kyle-cantrell-portfolio.git
