@@ -179,6 +179,7 @@ body {
     0 calc(var(--checker-size) / 2),
     calc(var(--checker-size) / 2) calc(var(--checker-size) / -2),
     calc(var(--checker-size) / -2) 0;
+  background-attachment: fixed;
 }
 
 
