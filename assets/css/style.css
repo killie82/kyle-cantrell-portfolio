@@ -24,51 +24,60 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    to bottom right,
+    #34303f 3%,
+    #232027 97%
   );
+
   --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    to bottom right,
+    rgba(122, 46, 255, 0.12) 0%,
+    rgba(21, 21, 21, 0) 100%
+  ), #232323;
+
   --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    to bottom right,
+    #7cff00 0%,
+    rgba(255, 60, 172, 0.15) 50%
   );
+
   --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    135deg,
+    rgba(124, 255, 0, 0.20) 0%,
+    rgba(122, 46, 255, 0.08) 60%
+  ), #232323;
+
   --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    to bottom right,
+    #7a2eff 0%,
+    rgba(255, 60, 172, 0.15) 50%
   );
+
   --text-gradient-yellow: linear-gradient(
-    to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    to right,
+    #7cff00,
+    #ff3cac
   );
+
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --jet: #4a4554;
+  --onyx: #2d2933;
+  --eerie-black-1: #232323;
+  --eerie-black-2: #1b1b1d;
+  --smoky-black: #111113;
 
+  --white-1: #f7f4ec;
+  --white-2: #f4f1e8;
+
+  --orange-yellow-crayola: #7cff00;
+  --vegas-gold: #ff3cac;
+
+  --light-gray: #d4d0da;
+  --light-gray-70: rgba(212, 208, 218, 0.70);
+
+  --bittersweet-shimmer: #ff4f64;
   /**
    * typography
    */
@@ -155,7 +164,23 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body {
+  --checker-size: 150px;
+
+  background-color: #111113;
+  background-image:
+    linear-gradient(45deg, #34303f 25%, transparent 25%),
+    linear-gradient(-45deg, #34303f 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #34303f 75%),
+    linear-gradient(-45deg, transparent 75%, #34303f 75%);
+  background-size: var(--checker-size) var(--checker-size);
+  background-position:
+    0 0,
+    0 calc(var(--checker-size) / 2),
+    calc(var(--checker-size) / 2) calc(var(--checker-size) / -2),
+    calc(var(--checker-size) / -2) 0;
+  background-attachment: fixed;
+}
 
 
 
@@ -168,10 +193,15 @@ body { background: var(--smoky-black); }
 .sidebar,
 article {
   background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
+  border: 2px solid #ff3cac;
   border-radius: 20px;
   padding: 15px;
-  box-shadow: var(--shadow-1);
+
+  box-shadow:
+    0 0 0 2px rgba(255, 60, 172, 0.18),
+    0 0 18px 6px rgba(124, 255, 0, 0.42),
+    0 0 40px 12px rgba(124, 255, 0, 0.22);
+
   z-index: 1;
 }
 
@@ -459,11 +489,17 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+
+  background: rgba(35, 32, 39, 0.88);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
-  box-shadow: var(--shadow-2);
+
+  border: 2px solid #ff3cac;
+
+  box-shadow:
+    0 0 8px rgba(255, 60, 172, 0.45),
+    0 18px 50px 12px rgba(124, 255, 0, 0.38),
+    0 32px 90px 22px rgba(124, 255, 0, 0.18);
+
   z-index: 5;
 }
 
@@ -1879,4 +1915,120 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/*-----------------------------------*\
+  #CUSTOM 90S THEME OVERRIDES
+\*-----------------------------------*/
+
+.sidebar,
+article {
+  border: 2px solid #ff3cac;
+
+  box-shadow:
+    0 0 18px 6px rgba(124, 255, 0, 0.55),
+    0 0 42px 16px rgba(124, 255, 0, 0.30),
+    0 0 70px 24px rgba(124, 255, 0, 0.14);
+}
+
+.navbar {
+  border: 2px solid #ff3cac;
+
+  box-shadow:
+    10px -10px 18px 2px rgba(124, 255, 0, 0.48),
+    18px -18px 36px 6px rgba(124, 255, 0, 0.24);
+}
+
+/*-----------------------------------*\
+  #Contain title within sidebar
+\*-----------------------------------*/
+.sidebar .info-content .title {
+  width: auto;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/*-----------------------------------*\
+  #Experience/Education bullet points
+\*-----------------------------------*/
+
+.timeline-text {
+  padding-left: 18px;
+}
+
+.timeline-text li {
+  margin-bottom: 6px;
+}
+
+.experience-list {
+  padding-left: 22px;
+}
+
+.experience-list li {
+  list-style-type: disc;
+  display: list-item;
+  margin-bottom: 6px;
+}
+
+.experience-list li::marker {
+  color: #7cff00;
+}
+
+.education-list {
+  padding-left: 22px;
+}
+
+.education-list li {
+  list-style-type: disc;
+  display: list-item;
+  margin-bottom: 6px;
+}
+
+.education-list li::marker {
+  color: #7cff00;
+}
+
+/*-----------------------------------*\
+  #Custom Skill Tags
+\*-----------------------------------*/
+
+.skills-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skills-group-title {
+  margin-bottom: 12px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.skills-tags li {
+  list-style: none;
+  color: #7cff00;
+  background: #232027;
+  border: 1px solid #c172fd;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  transition: 0.2s ease;
+}
+
+.skills-tags li:hover {
+  color: #7cff00;
+  border-color: #ff3cac;
+  box-shadow:
+    0 0 8px rgba(255, 60, 172, 0.55),
+    0 0 16px rgba(124, 255, 0, 0.20);
 }
